@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 interface AppHeaderProps {
   onMenuClick: () => void;
@@ -30,6 +31,16 @@ export default function AppHeader({ onMenuClick }: AppHeaderProps) {
             />
           </svg>
         </button>
+        {/* Logo for mobile view */}
+        <div className="md:hidden">
+          <Image
+            src="/logo.png"
+            alt="TodoSaaS"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
+        </div>
         {/* Search or breadcrumbs can go here */}
       </div>
 

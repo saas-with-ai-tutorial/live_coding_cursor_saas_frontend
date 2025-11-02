@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,15 @@ export default function Footer() {
       <div className="w-full max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold text-[#e50914] mb-4">TodoSaaS</h3>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="TodoSaaS"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+            </div>
             <p className="text-gray-400">
               Centralize your todos from anywhere. AI-powered task management.
             </p>

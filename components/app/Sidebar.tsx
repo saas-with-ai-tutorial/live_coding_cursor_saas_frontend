@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -44,8 +45,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       >
         {/* Logo */}
         <div className="h-20 flex items-center px-6 border-b border-gray-800 justify-between">
-          <Link href="/app" className="text-2xl font-bold text-[#e50914]">
-            TodoSaaS
+          <Link href="/app" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="TodoSaaS"
+              width={40}
+              height={40}
+              className="h-10 w-10"
+              priority
+            />
           </Link>
           <button
             onClick={onClose}
